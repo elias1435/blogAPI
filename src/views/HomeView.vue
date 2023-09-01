@@ -66,4 +66,7 @@ const formatDate = (created_at) => {
 nav {
   margin-top: 30px;
 }
+.blog-grid img {
+  height: 224px;
+}
 </style>
