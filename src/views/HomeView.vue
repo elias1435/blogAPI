@@ -6,7 +6,7 @@
   const loading = ref(true)
 
   async function getNews(){
-    let res = await axios.get('https://basic-blog.teamrabbil.com/api/post-list/2')
+    let res = await axios.get('https://basic-blog.teamrabbil.com/api/post-newest')
     newses.value = res.data
     loading.value = false
   }
@@ -44,12 +44,15 @@ const formatDate = (created_at) => {
 <style scoped>
 
 .article {
-    display: flex;
-    column-gap: 20px;
-    border: 1p;
+  display: flex;
+  column-gap: 20px;
+  flex-wrap: wrap;
+  row-gap: 40px;
 }
 .blog-grid {
     background-color: rgba(220, 220, 220, 0.362);
+    width: 32%;
+    box-shadow: 1px 1px 3px gainsboro;
 }
 .article strong {
   padding: 10px 0;
