@@ -4,7 +4,7 @@
 
 
 <template>
-    <nav class="bg-gray-600">
+    <nav class="bg-gray-600 mb-5">
     <div class=" px-2 sm:px-6 lg:px-8">
         <div class="relative flex h-16 items-center justify-between">
         <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
