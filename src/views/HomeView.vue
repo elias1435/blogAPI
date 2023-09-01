@@ -25,10 +25,12 @@ const formatDate = (created_at) => {
 <template>
   <div class="container mx-auto px-4 ">
     <div class="article">
-      <div v-if="loading == false" class="pt-5" v-for="(news, index) in newses" :key="index">
+      <div v-if="loading == false" class="blog-grid" v-for="(news, index) in newses" :key="index">
         <img :src="news.img" :alt="news.img">
-        <p>{{news.title}}</p>
+        <div class="padding-5">
+        <strong>{{news.title}}</strong>
         <p>{{news.short}}</p>
+        </div>
       </div>
 
     <div v-else="loading" class="text-center mt-10">
@@ -46,5 +48,19 @@ const formatDate = (created_at) => {
     column-gap: 20px;
     border: 1p;
 }
-
+.blog-grid {
+    background-color: rgba(220, 220, 220, 0.362);
+}
+.article strong {
+  padding: 10px 0;
+  line-height: 1.5em;
+  display: block;
+}
+.padding-5 {
+  display: block;
+  padding: 10px;
+}
+nav {
+  margin-top: 30px;
+}
 </style>
